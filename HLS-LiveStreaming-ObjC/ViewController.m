@@ -16,12 +16,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self playVideoStream];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewDidLayoutSubviews {
+    
+    // use this to resize but make tab bar not visible
+//    pvc.fullscreen = true;
+    
+    // this will resize on rotation
+    pvc.view.frame = self.view.bounds;
+    
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    // pause the movie when switching other tab bar vc
+    [pvc pause];
+}
+
+-(void)playVideoStream
+{
+    NSURL *streamURL = [[NSURL alloc] initWithString:urlString];
+    
+    pvc = [[MPMoviePlayerController alloc] initWithContentURL:streamURL];
+    
+    pvc.controlStyle = MPMovieControlStyleFullscreen;
+    
+    [pvc.view setFrame: self.view.frame];
+    [self.view addSubview:pvc.view];
+    [pvc play];
+    
 }
 
 @end
