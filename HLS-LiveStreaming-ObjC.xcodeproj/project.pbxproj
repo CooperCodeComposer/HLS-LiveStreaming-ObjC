@@ -52,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED530CFC1D0EAB0B00EAA0FC /* HTML view formatting */ = {
+			isa = PBXGroup;
+			children = (
+				EDE8E7BF1D0E82030024C018 /* htmlView.html */,
+				EDE8E7C11D0E8A110024C018 /* videoPlayer.css */,
+			);
+			name = "HTML view formatting";
+			sourceTree = "<group>";
+		};
 		EDE8E7911D0E25C30024C018 = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +88,12 @@
 				EDE8E7A41D0E25C30024C018 /* ViewController.m */,
 				EDE8E7B41D0E26180024C018 /* HTMLViewController.h */,
 				EDE8E7B51D0E26180024C018 /* HTMLViewController.m */,
+				ED530CFC1D0EAB0B00EAA0FC /* HTML view formatting */,
 				EDE8E7A61D0E25C30024C018 /* Main.storyboard */,
 				EDE8E7A91D0E25C30024C018 /* Assets.xcassets */,
 				EDE8E7AB1D0E25C30024C018 /* LaunchScreen.storyboard */,
 				EDE8E7AE1D0E25C30024C018 /* Info.plist */,
 				EDE8E79D1D0E25C30024C018 /* Supporting Files */,
-				EDE8E7BF1D0E82030024C018 /* htmlView.html */,
-				EDE8E7C11D0E8A110024C018 /* videoPlayer.css */,
 			);
 			path = "HLS-LiveStreaming-ObjC";
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 				EDE8E7B31D0E25C30024C018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
